@@ -1,6 +1,6 @@
-# ods_shop_shop_da  
+# ods_shop_shop_da
 sqoop import  \
---connect jdbc:mysql://rm-2ze9z87x15p0qa7bgfo.mysql.rds.aliyuncs.com:3306/shop?useSSL=false  \
+--connect jdbc:mysql://rm-2ze9z87x15p0qa7bgfo.mysql.rds.aliyuncs.com:3306/shop?zeroDateTimeBehavior=CONVERT_TO_NULL  \
 --username gt1206 --password gt1206@001 --table shop  \
 --hive-import --hive-table ods.ods_shop_shop_da  \
 --target-dir ./shop/$1 --hive-partition-key pt  \

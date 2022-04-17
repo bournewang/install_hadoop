@@ -1,6 +1,6 @@
-# ods_trade_trade_order_da  
+# ods_trade_trade_order_da
 sqoop import   \
---connect jdbc:mysql://rm-2ze9z87x15p0qa7bgfo.mysql.rds.aliyuncs.com:3306/trade?useSSL=false   \
+--connect jdbc:mysql://rm-2ze9z87x15p0qa7bgfo.mysql.rds.aliyuncs.com:3306/trade?zeroDateTimeBehavior=CONVERT_TO_NULL   \
 --username gt1206 --password gt1206@001 --table trade_order   \
 --hive-import --hive-table ods.ods_trade_trade_order_da   \
 --target-dir ./trade/$1 --hive-partition-key pt   \

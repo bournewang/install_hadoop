@@ -1,6 +1,6 @@
-# ods_hdel_city_da  
+# ods_hdel_city_da
 sqoop import  \
---connect jdbc:mysql://rm-2ze9z87x15p0qa7bgfo.mysql.rds.aliyuncs.com:3306/hdel?useSSL=false  \
+--connect jdbc:mysql://rm-2ze9z87x15p0qa7bgfo.mysql.rds.aliyuncs.com:3306/hdel?zeroDateTimeBehavior=CONVERT_TO_NULL  \
 --username gt1206 --password gt1206@001 --table city  \
 --hive-import --hive-table ods.ods_hdel_city_da  \
 --target-dir ./hdel/$1 --hive-partition-key pt  \

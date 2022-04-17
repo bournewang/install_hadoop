@@ -1,6 +1,6 @@
 # ods_crm_cdel_hold_da
 sqoop import \
---connect jdbc:mysql://rm-2ze9z87x15p0qa7bgfo.mysql.rds.aliyuncs.com:3306/crm?useSSL=false \
+--connect jdbc:mysql://rm-2ze9z87x15p0qa7bgfo.mysql.rds.aliyuncs.com:3306/crm?zeroDateTimeBehavior=CONVERT_TO_NULL \
 --username gt1206 --password gt1206@001 --table cdel_hold \
 --hive-import \
 --hive-table ods.ods_crm_cdel_hold_da \
