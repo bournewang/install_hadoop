@@ -1,0 +1,10 @@
+jdk JAVA_HOME
+hadoop HADOOP_HOME
+apache-zookeeper ZOOKEEPER_HOME
+apache-hive HIVE_HOME
+apache-flume FLUME_HOME
+sqoop SQOOP_HOME
+scala SCALA_HOME
+spark SPARK_HOME
+hbase HBASE_HOME
+kafka KAFKA_HOME

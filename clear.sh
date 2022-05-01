@@ -2,19 +2,19 @@
 
 echo "clear apps"
 etc=/etc
-#etc=./
-dest=module
+#etc=/usr/local/etc
+dest=/opt/module
 for app in $dest/*
-do 
+do
     echo "remove $app"
     rm -rf $app*
-done    
+done
 
 if [ -f $etc/profile.bk ];
 then
     echo "resotre $etc/profile"
     cp $etc/profile.bk $etc/profile
-fi    
+fi
 
 echo "done!"
-echo 
+echo
