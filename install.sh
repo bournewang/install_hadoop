@@ -6,8 +6,8 @@ if [ $# -ne 1 ];then
 fi
 
 src=`pwd`
-#etc=/etc
-etc=/usr/local/etc
+etc=/etc
+#etc=/usr/local/etc
 #src=.
 software=$src/software
 profile=$etc/profile
