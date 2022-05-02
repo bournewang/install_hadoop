@@ -1,6 +1,6 @@
-# Install and configure Hadoop & other components
+# Install Hadoop and related components
 
-## Configure Hosts
+## 1. Configure Hosts
 Let's assume you have 3 hosts  hadoop001/hadoop002/hadoop003, and configured access each other with ssh key(withput entering password). 
 
 If not, do as following steps. 
@@ -16,7 +16,7 @@ or use the IP instead:
 ```
 this script will generate ssh key in each host, and append all the public keys in "/root/.ssh/authorized_keys" for each hosts.
 
-## Prepare packages
+## 2. Prepare packages
 Download or clone this project in all 3 hosts; 
 
 Run _./download.sh_ to download packages,
@@ -39,7 +39,7 @@ total 3064776
 -rw-r--r--@ 1 wangxiaopei  staff   17953604 Feb 18 18:01 sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz
 ```
 
-## Install
+## 3. Install
 
 _install.sh_ will install packages into /opt/module, and add environment variables to /etc/profile;
 
@@ -74,7 +74,7 @@ run "./install.sh 2" on hadoop002;
 run "./install.sh 3" on hadoop003;
 
 
-## Start Service
+## 4. Start Service
 let the environment variables go effect.
 ```shell
 [root@hadoop001 opt]# source /etc/profile
@@ -111,7 +111,7 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/opt/mod
 14815 JournalNode
 ```
 
-## Uninstall 
+## 5. Uninstall 
 go to /opt, and run "clear.sh"; repeat the command in the other hosts.
 ```shell
 [root@hadoop001 opt]# ./clear.sh
