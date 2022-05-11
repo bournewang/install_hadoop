@@ -41,7 +41,7 @@ init_jdk(){
 }
 init_hadoop(){
   exec1 "echo export HADOOP_COMMON_LIB_NATIVE_DIR=\${HADOOP_HOME}/lib/native  >> $profile"
-  exec1 "echo export HADOOP_OPTS=\"-Djava.library.path=\$HADOOP_HOME/lib\"  >> $profile"
+  exec1 "echo export HADOOP_OPTS=\\\"-Djava.library.path=\$HADOOP_HOME/lib\\\"  >> $profile"
 
 	src_conf=$src/conf/hadoop
 	exec1 "cd etc/hadoop"
